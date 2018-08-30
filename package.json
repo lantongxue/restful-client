@@ -1,0 +1,27 @@
+{
+  "name": "restful-client",
+  "version": "1.0.0",
+  "description": "A API test tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/lantongxue/restful-client",
+  "keywords": [
+    "rest",
+    "restful",
+    "restful client",
+    "api",
+    "api test",
+    "api test tool",
+    "Electron"
+  ],
+  "author": "lantongxue",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.8"
+  },
+  "dependencies": {
+    "admin-lte": "^2.4.8"
+  }
+}

@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="./node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./node_modules/admin-lte/bower_components/font-awesome/css/font-awesome.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/skins/_all-skins.min.css">
+
+  <style type="text/css">
+  ::-webkit-scrollbar-track-piece {
+    background-color:transparent;
+  }
+  ::-webkit-scrollbar {
+    width:5px;
+    height:5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color:#dddddd;
+    background-clip:padding-box;
+    min-height:28px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color:#bbb;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+  }
+  .overlay>.fa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+  }
+  .overlay>span{
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    margin-top: -22px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+  }
+  pre{
+    white-space: pre-wrap;
+  }
+  </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini fixed">
+<div class="wrapper">
+
+  <header class="main-header" style="-webkit-app-region: drag">
+
+    <!-- Logo -->
+    <a href="javascript:void(0)" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">REST</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">RESTful Client</span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="-webkit-app-region: no-drag;">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu" style="-webkit-app-region: no-drag;">
+        <ul class="nav navbar-nav">
+            <li data-control="minimize">
+              <a href="javascript:void(0)"><i class="fa fa-window-minimize"></i></a>
+            </li>
+            <li data-control="maximize">
+              <a href="javascript:void(0)"><i class="fa fa-window-maximize"></i></a>
+            </li>
+            <li data-control="close">
+              <a href="javascript:void(0)"><i class="fa fa-window-close"></i></a>
+            </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active">
+          <a href="view/index.html" class="default-page">
+            <i class="fa fa-dashboard"></i> <span>仪表盘</span>
+          </a>
+        </li>
+        <li>
+          <a href="view/create-request.html">
+            <i class="fa fa-plus"></i> <span>创建请求</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <i class="fa fa-list-alt"></i> <span>请求记录</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <i class="fa fa-hashtag"></i> <span>小工具</span>
+          </a>
+        </li>
+        <li class="header">其他信息</li>
+        <li>
+          <a href="view/about.html">
+            <i class="fa fa-diamond"></i> <span>关于</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" id="mainContent">
+
+  </div>
+  <!-- /.content-wrapper -->
+</div>
+<!-- ./wrapper -->
+<script>
+require('./renderer.js')
+const DoRequest = require('./processRequest')
+</script>
+<script src="./node_modules/admin-lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+</body>
+</html>
